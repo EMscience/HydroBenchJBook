@@ -1,0 +1,9 @@
+title: HydroBench - Hydrological Model Benchmarking and Diagnostic tool
+author: Edom Moges from Environmental Systems Dynamics Laboratory [ESDL](https://www.esdlberkeley.com/)
+copyright: "2022"
+logo: images/jupyter-earth.png
+execute:
+    execute_notebooks: off
+    timeout: -1
+    allow_errors: true
+    stderr_output: show

@@ -1,0 +1,8 @@
+format: jb-book 
+root: HydroBenchIntroduction
+chapters:
+ - file: PredictivePerformanceMetrics
+ - file: HydrologicalConsistencySignatures 
+ - file: InformationTheoreticMetrics
+ - file: TOSSHInterface
+ - file: Example.ipytb
