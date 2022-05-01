@@ -22,7 +22,9 @@ c) To start the MatLab engine within a notebook:
  eng.quit() # end matlab engine
 ```
 
-d) This [link](https://www.mathworks.com/help/matlab/matlab_external/call-user-script-and-function-from-python.html) provides a guide on how to use a local Matlab function within Matlab. Its implementation to access the TOSSH functions and methods within HydroBench is as follows.
+d) This [link](https://www.mathworks.com/help/matlab/matlab_external/call-user-script-and-function-from-python.html) 
+provides a guide on how to use a local Matlab function within Python. Its implementation to access the TOSSH 
+functions and methods within HydroBench is as follows.
 
 ```
  	eng.addpath('./TOSSH-master/TOSSH_code/calculation_functions/');
@@ -30,4 +32,5 @@ d) This [link](https://www.mathworks.com/help/matlab/matlab_external/call-user-s
  	eng.addpath('./TOSSH-master/TOSSH_code/utility_functions/'); 
 ```
 
-After following the above steps, any function from TOSSH can be called within HydroBench. The HydroBench demonstration notebook provides a detailed example of implementing the above steps.
+After following the above steps, any function from TOSSH can be called within HydroBench. 
+The HydroBench demonstration notebook provides a detailed example of implementing the above steps.
