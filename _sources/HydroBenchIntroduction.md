@@ -44,8 +44,11 @@ and their sensitivities (color-coded).
 The application of these metrics is demonstrated on the the National Hydrologic Model product using the 
 PRMS model ([NHM-PRMs](https://www.sciencebase.gov/catalog/item/58af4f93e4b01ccd54f9f3da)). 
 NHM-PRMS has two model products covering the CONUS - the calibrated and uncalibrated model products. 
-Out of the CONUS wide NHM-PRMS products, the example notebook at the end of this Jupyterbook focused on 
+Out of the CONUS wide NHM-PRMS products, the example notebook at the end of this Jupyterbook focuses on 
 the NHM-PRMS product at the 
 [Cedar River, WA](https://waterdata.usgs.gov/nwis/nwismap/?site_no=12115000&agency_cd=USGS). 
+
+For an interactive use of the example notebook please refer to the following binder link 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/EMscience/HydroBench/HEAD).
 
  

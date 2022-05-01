@@ -13,7 +13,7 @@ and [marginal](https://en.wikipedia.org/wiki/Marginal_distribution) probabilitie
 variables referred in the input table header. In order to compute these probabilities, HydroBench employed histogram based
 probability estimation. 
 
-Table 1 below shows the syntax, description and equations of the Information-theoretic metrics. For their implementation,
+Table 3 shows the syntax, description and equations of the Information-theoretic metrics. For their implementation,
 please refere to the example notebook. 
  
 
