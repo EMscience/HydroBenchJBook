@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Functional and Predictive Measures" href="InformationTheoreticMetrics.html" />
+    <link rel="prev" title="Information-Theoretic Performance Measures" href="InformationTheoreticMetrics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="InformationTheoreticMetrics.html">
-   Functional and Predictive Measures
+   Information-Theoretic Performance Measures
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -204,33 +204,31 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="linking-hydrobench-and-tossh">
 <h1>Linking HydroBench and TOSSH<a class="headerlink" href="#linking-hydrobench-and-tossh" title="Permalink to this headline">¶</a></h1>
-<p>HydroBench allows using the Toolbox for Streamflow Signatures (<a class="reference external" href="https://tosshtoolbox.github.io/TOSSH/">TOSSH</a>) toolbox through the matlab - python API.
-To get started, the following are required:</p>
+<p>HydroBench allows using the Toolbox for Streamflow Signatures (<a class="reference external" href="https://tosshtoolbox.github.io/TOSSH/">TOSSH</a>) functions through the matlab - python API. To get started, the following are required:</p>
 <ol>
-<li><p>a licence to Matlab.</p></li>
+<li><p>a license to MatLab.</p></li>
 <li><p>cloning/downloading the TOSSH Toolbox to your working directory.</p></li>
-<li><p>enabling the Matlab and Python API through the following steps.</p>
+<li><p>enabling the MatLab and Python API through the following steps.</p>
 <p>a) Refer to the following <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html">link</a> for details.</p>
-<p>b) To setup Matlab in Python:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> python setup.py install # inside the matlab rootfolder: i.e., cd &quot;matlabroot\extern\engines\python&quot;
-</pre></div>
-</div>
-<p>c) To start the Matlab engine within a notebook:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> import matlab.engine
- eng = matlab.engine.start_matlab() # start matlab engine
- eng.quit() # end matlab engine
-</pre></div>
-</div>
-<p>d) This <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab_external/call-user-script-and-function-from-python.html">link</a> provides
-a guide on how to use a local matlab function within matlab. Its implementation to acess the TOSSH functions and methods within HydroBench is as follows.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> 	eng.addpath(&#39;./TOSSH-master/TOSSH_code/calculation_functions/&#39;);
- 	eng.addpath(&#39;./TOSSH-master/TOSSH_code/signature_functions/&#39;);
- 	eng.addpath(&#39;./TOSSH-master/TOSSH_code/utility_functions/&#39;);
-</pre></div>
-</div>
+<p>b) To setup MatLab in Python:</p>
 </li>
 </ol>
-<p>After following the above steps, any function from TOSSH can be called within HydroBench. The HydroBench demonstration notebook provides a detailed example of implenting the above steps.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="c1"># inside the MatLab rootfolder: i.e., cd &quot;matlabroot\extern\engines\python&quot;</span>
+</pre></div>
+</div>
+<p>c) To start the MatLab engine within a notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">matlab.engine</span>
+ <span class="n">eng</span> <span class="o">=</span> <span class="n">matlab</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">start_matlab</span><span class="p">()</span> <span class="c1"># start MatLab engine</span>
+ <span class="n">eng</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span> <span class="c1"># end matlab engine</span>
+</pre></div>
+</div>
+<p>d) This <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab_external/call-user-script-and-function-from-python.html">link</a> provides a guide on how to use a local Matlab function within Matlab. Its implementation to access the TOSSH functions and methods within HydroBench is as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 	<span class="n">eng</span><span class="o">.</span><span class="n">addpath</span><span class="p">(</span><span class="s1">&#39;./TOSSH-master/TOSSH_code/calculation_functions/&#39;</span><span class="p">);</span>
+ 	<span class="n">eng</span><span class="o">.</span><span class="n">addpath</span><span class="p">(</span><span class="s1">&#39;./TOSSH-master/TOSSH_code/signature_functions/&#39;</span><span class="p">);</span>
+ 	<span class="n">eng</span><span class="o">.</span><span class="n">addpath</span><span class="p">(</span><span class="s1">&#39;./TOSSH-master/TOSSH_code/utility_functions/&#39;</span><span class="p">);</span> 
+</pre></div>
+</div>
+<p>After following the above steps, any function from TOSSH can be called within HydroBench. The HydroBench demonstration notebook provides a detailed example of implementing the above steps.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,7 +260,7 @@ a guide on how to use a local matlab function within matlab. Its implementation 
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Functional and Predictive Measures</p>
+            <p class="prev-next-title">Information-Theoretic Performance Measures</p>
         </div>
     </a>
 </div>

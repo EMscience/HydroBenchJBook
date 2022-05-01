@@ -205,6 +205,19 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="information-theoretic-performance-measures">
 <h1>Information-Theoretic Performance Measures<a class="headerlink" href="#information-theoretic-performance-measures" title="Permalink to this headline">¶</a></h1>
+<p>HydroBench allows the computation of multi-dimensional entropies (H(.)), Mutual Information MI(.,.) and Tranfer Entropy - TE represented as MI(.,.|.).
+By using these metrics, two model diagnostics can be undertaken:</p>
+<ol class="simple">
+<li><p>understanding the tradeoffs between predictive and functional model performances.</p></li>
+<li><p>understanding model internal functions that lead to the predictive performance using Process Networks.</p></li>
+</ol>
+<p>MI is used as a predictive performance metrics while TE is used as an indicator of model functional performance.</p>
+<p>The computation of MI and TE requires different <a class="reference external" href="https://en.wikipedia.org/wiki/Joint_probability_distribution">joint</a>
+and <a class="reference external" href="https://en.wikipedia.org/wiki/Marginal_distribution">marginal</a> probabilities of the various flux and store hydrological
+variables referred in the input table header. In order to compute these probabilities, HydroBench employed histogram based
+probability estimation.</p>
+<p>Table 1 below shows the syntax, description and equations of the Information-theoretic metrics. For their implementation,
+please refere to the example notebook.</p>
 <p><img alt="InformationTheoreticMetrics" src="_images/InformationTheoreticMetrics.png" /></p>
 </div>
 

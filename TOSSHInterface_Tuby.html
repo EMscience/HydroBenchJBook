@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HydroBench - Introduction &#8212; HydroBench - Hydrological Model Benchmarking and Diagnostic tool</title>
+    <title>Linking HydroBench and TOSSH &#8212; HydroBench - Hydrological Model Benchmarking and Diagnostic tool</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Predictive Performance Measues" href="PredictivePerformanceMetrics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -91,8 +90,8 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HydroBenchIntroduction.html">
    HydroBench - Introduction
   </a>
  </li>
@@ -111,11 +110,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="InformationTheoreticMetrics.html">
    Information-Theoretic Performance Measures
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="TOSSHInterface.html">
-   Linking HydroBench and TOSSH
   </a>
  </li>
 </ul>
@@ -159,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/HydroBenchIntroduction.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/TOSSHInterface_Tuby.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -184,29 +178,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hydrological-model-benchmarking-and-diagnostics">
-   Hydrological Model Benchmarking and Diagnostics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#input-and-output-of-hydrobench">
-   Input and output of HydroBench
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#application-test-case">
-   Application test case
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -214,88 +185,46 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HydroBench - Introduction</h1>
+                <h1>Linking HydroBench and TOSSH</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hydrological-model-benchmarking-and-diagnostics">
-   Hydrological Model Benchmarking and Diagnostics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#input-and-output-of-hydrobench">
-   Input and output of HydroBench
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#application-test-case">
-   Application test case
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hydrobench-introduction">
-<h1>HydroBench - Introduction<a class="headerlink" href="#hydrobench-introduction" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/EMscience/HydroBench"><img alt="HydroBench Github Repo" src="_images/GitHubIcon.png" /></a>
-<a class="reference external" href="https://mybinder.org/v2/gh/EMscience/HydroBench/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a>
-<a class="reference external" href="https://zenodo.org/badge/latestdoi/375593287"><img alt="DOI" src="https://zenodo.org/badge/375593287.svg" /></a></p>
-<div class="section" id="hydrological-model-benchmarking-and-diagnostics">
-<h2>Hydrological Model Benchmarking and Diagnostics<a class="headerlink" href="#hydrological-model-benchmarking-and-diagnostics" title="Permalink to this headline">¶</a></h2>
-<p>Hydrological model performances are commonly evaluated based on different statistical metrics e.g., the Nash Sutcliffe
-coefficient (<a class="reference external" href="https://en.wikipedia.org/wiki/Nash%E2%80%93Sutcliffe_model_efficiency_coefficient">NSE</a>). However, these metrics
-do not reveal neither the hydrological consistency of the model nor the model’s functional performances, such as how different
-flux and store variables interact within the model. As such, they are poor in model diagnostics and fail to indicate whether
-the model is right for the right reason. In contrast, hydrological process signatures and information theoretic metrics are
-capable of revealing the hydrological consistency of the model prediction and model internal functions respectively. In addressing this gap,
-HydroBench provides a comprehensive model benchmarking and diagnostic using:</p>
-<ol class="simple">
-<li><p>a set of statistical predictive performance metrics: Nash Sutcliffe coefficient, Kling and Gupta coefficient, percent bias and pearson correlation coefficient</p></li>
-<li><p>a set of hydrological process based signatures: flow duration curve (FDC), recession curve, time-linked flow duration curve (T-FDC), and runoff coefficient, and</p></li>
-<li><p>information theoretic based metrics, particularly <a class="reference external" href="https://en.wikipedia.org/wiki/Transfer_entropy">Transfer Entropy (TE)</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Mutual_information">Mutual Information(MI)</a>.</p></li>
+  <div class="tex2jax_ignore mathjax_ignore section" id="linking-hydrobench-and-tossh">
+<h1>Linking HydroBench and TOSSH<a class="headerlink" href="#linking-hydrobench-and-tossh" title="Permalink to this headline">¶</a></h1>
+<p>HydroBench allows using the Toolbox for Streamflow Signatures (<a class="reference external" href="https://tosshtoolbox.github.io/TOSSH/">TOSSH</a>) functions through the matlab - python API.
+To get started, the following are required:</p>
+<ol>
+<li><p>a licence to Matlab.</p></li>
+<li><p>cloning/downloading the TOSSH Toolbox to your working directory.</p></li>
+<li><p>enabling the Matlab and Python API through the following steps.</p>
+<p>a) Refer to the following <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html">link</a> for details.</p>
+<p>b) To setup Matlab in Python:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> python setup.py install # inside the matlab rootfolder: i.e., cd &quot;matlabroot\extern\engines\python&quot;
+</pre></div>
+</div>
+<p>c) To start the Matlab engine within a notebook:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> import matlab.engine
+ eng = matlab.engine.start_matlab() # start matlab engine
+ eng.quit() # end matlab engine
+</pre></div>
+</div>
+<p>d) This <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab_external/call-user-script-and-function-from-python.html">link</a> provides
+a guide on how to use a local matlab function within matlab. Its implementation to acess the TOSSH functions and methods within HydroBench is as follows.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> 	eng.addpath(&#39;./TOSSH-master/TOSSH_code/calculation_functions/&#39;);
+ 	eng.addpath(&#39;./TOSSH-master/TOSSH_code/signature_functions/&#39;);
+ 	eng.addpath(&#39;./TOSSH-master/TOSSH_code/utility_functions/&#39;);
+</pre></div>
+</div>
+</li>
 </ol>
-<p>A detailed description of each set of benchmarking metrics is provided in the next sections.</p>
-</div>
-<div class="section" id="input-and-output-of-hydrobench">
-<h2>Input and output of HydroBench<a class="headerlink" href="#input-and-output-of-hydrobench" title="Permalink to this headline">¶</a></h2>
-<p>HydroBench accepts model and observed data in a predefined structure. The input structure is a table
-of data that consists of column heads and the corresponding DateTime. The minimum number of columns in the
-input table is two (e.g., observed streamflow, and model streamflow) with their start and end dates.
-With these three inputs, basic benchmarking results can be obtained. The basic results are all of
-the predictive performance metrics, FDC, and T-FDC. With an extended input table that contains one
-or more columns of independent predictor variables (e.g., precipitation), HydroBench can provide all of the
-three metrics - predictive, hydrological signature, and functional performance measures (Figure).
-Since HydroBench has a modular design, it can easily be called into any notebooks that host model results
-and generate a table of inputs (e.g., Figure a). Similarly, any single metric can be employed depending
-on users’ preferences.</p>
-<p><img alt="Figure" src="_images/Figure2.jpg" /></p>
-<p>Figure: A) Example of standard input table to HydroBench, and B) Summary of the output metrics of HydroBench
-and their sensitivities (color-coded).</p>
-</div>
-<div class="section" id="application-test-case">
-<h2>Application test case<a class="headerlink" href="#application-test-case" title="Permalink to this headline">¶</a></h2>
-<p>The application of these metrics is demonstrated on the the National Hydrologic Model product using the
-PRMS model (<a class="reference external" href="https://www.sciencebase.gov/catalog/item/58af4f93e4b01ccd54f9f3da">NHM-PRMs</a>).
-NHM-PRMS has two model products covering the CONUS - the calibrated and uncalibrated model products.
-Out of the CONUS wide NHM-PRMS products, the example notebook at the end of this Jupyterbook focused on
-the NHM-PRMS product at the
-<a class="reference external" href="https://waterdata.usgs.gov/nwis/nwismap/?site_no=12115000&amp;agency_cd=USGS">Cedar River, WA</a>.</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<p>After following the above steps, any function from TOSSH can be called within HydroBench. The HydroBench demonstration notebook provides a detailed example of implenting the above steps.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -323,13 +252,6 @@ the NHM-PRMS product at the
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="PredictivePerformanceMetrics.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Predictive Performance Measues</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             
         </div>

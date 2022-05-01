@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HydroBench - Introduction &#8212; HydroBench - Hydrological Model Benchmarking and Diagnostic tool</title>
+    <title>TOSSH Interface &#8212; HydroBench - Hydrological Model Benchmarking and Diagnostic tool</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,9 +51,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Predictive Performance Measues" href="PredictivePerformanceMetrics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -91,8 +92,8 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HydroBenchIntroduction.html">
    HydroBench - Introduction
   </a>
  </li>
@@ -115,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="TOSSHInterface.html">
-   Linking HydroBench and TOSSH
+   TOSSH Interface
   </a>
  </li>
 </ul>
@@ -159,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/HydroBenchIntroduction.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/TOSSHInterface___MarkdonBasedTables.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -184,29 +185,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hydrological-model-benchmarking-and-diagnostics">
-   Hydrological Model Benchmarking and Diagnostics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#input-and-output-of-hydrobench">
-   Input and output of HydroBench
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#application-test-case">
-   Application test case
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -214,88 +192,125 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HydroBench - Introduction</h1>
+                <h1>TOSSH Interface</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hydrological-model-benchmarking-and-diagnostics">
-   Hydrological Model Benchmarking and Diagnostics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#input-and-output-of-hydrobench">
-   Input and output of HydroBench
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#application-test-case">
-   Application test case
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hydrobench-introduction">
-<h1>HydroBench - Introduction<a class="headerlink" href="#hydrobench-introduction" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/EMscience/HydroBench"><img alt="HydroBench Github Repo" src="_images/GitHubIcon.png" /></a>
-<a class="reference external" href="https://mybinder.org/v2/gh/EMscience/HydroBench/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a>
-<a class="reference external" href="https://zenodo.org/badge/latestdoi/375593287"><img alt="DOI" src="https://zenodo.org/badge/375593287.svg" /></a></p>
-<div class="section" id="hydrological-model-benchmarking-and-diagnostics">
-<h2>Hydrological Model Benchmarking and Diagnostics<a class="headerlink" href="#hydrological-model-benchmarking-and-diagnostics" title="Permalink to this headline">¶</a></h2>
-<p>Hydrological model performances are commonly evaluated based on different statistical metrics e.g., the Nash Sutcliffe
-coefficient (<a class="reference external" href="https://en.wikipedia.org/wiki/Nash%E2%80%93Sutcliffe_model_efficiency_coefficient">NSE</a>). However, these metrics
-do not reveal neither the hydrological consistency of the model nor the model’s functional performances, such as how different
-flux and store variables interact within the model. As such, they are poor in model diagnostics and fail to indicate whether
-the model is right for the right reason. In contrast, hydrological process signatures and information theoretic metrics are
-capable of revealing the hydrological consistency of the model prediction and model internal functions respectively. In addressing this gap,
-HydroBench provides a comprehensive model benchmarking and diagnostic using:</p>
-<ol class="simple">
-<li><p>a set of statistical predictive performance metrics: Nash Sutcliffe coefficient, Kling and Gupta coefficient, percent bias and pearson correlation coefficient</p></li>
-<li><p>a set of hydrological process based signatures: flow duration curve (FDC), recession curve, time-linked flow duration curve (T-FDC), and runoff coefficient, and</p></li>
-<li><p>information theoretic based metrics, particularly <a class="reference external" href="https://en.wikipedia.org/wiki/Transfer_entropy">Transfer Entropy (TE)</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Mutual_information">Mutual Information(MI)</a>.</p></li>
-</ol>
-<p>A detailed description of each set of benchmarking metrics is provided in the next sections.</p>
-</div>
-<div class="section" id="input-and-output-of-hydrobench">
-<h2>Input and output of HydroBench<a class="headerlink" href="#input-and-output-of-hydrobench" title="Permalink to this headline">¶</a></h2>
-<p>HydroBench accepts model and observed data in a predefined structure. The input structure is a table
-of data that consists of column heads and the corresponding DateTime. The minimum number of columns in the
-input table is two (e.g., observed streamflow, and model streamflow) with their start and end dates.
-With these three inputs, basic benchmarking results can be obtained. The basic results are all of
-the predictive performance metrics, FDC, and T-FDC. With an extended input table that contains one
-or more columns of independent predictor variables (e.g., precipitation), HydroBench can provide all of the
-three metrics - predictive, hydrological signature, and functional performance measures (Figure).
-Since HydroBench has a modular design, it can easily be called into any notebooks that host model results
-and generate a table of inputs (e.g., Figure a). Similarly, any single metric can be employed depending
-on users’ preferences.</p>
-<p><img alt="Figure" src="_images/Figure2.jpg" /></p>
-<p>Figure: A) Example of standard input table to HydroBench, and B) Summary of the output metrics of HydroBench
-and their sensitivities (color-coded).</p>
-</div>
-<div class="section" id="application-test-case">
-<h2>Application test case<a class="headerlink" href="#application-test-case" title="Permalink to this headline">¶</a></h2>
-<p>The application of these metrics is demonstrated on the the National Hydrologic Model product using the
-PRMS model (<a class="reference external" href="https://www.sciencebase.gov/catalog/item/58af4f93e4b01ccd54f9f3da">NHM-PRMs</a>).
-NHM-PRMS has two model products covering the CONUS - the calibrated and uncalibrated model products.
-Out of the CONUS wide NHM-PRMS products, the example notebook at the end of this Jupyterbook focused on
-the NHM-PRMS product at the
-<a class="reference external" href="https://waterdata.usgs.gov/nwis/nwismap/?site_no=12115000&amp;agency_cd=USGS">Cedar River, WA</a>.</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="tossh-interface">
+<h1>TOSSH Interface<a class="headerlink" href="#tossh-interface" title="Permalink to this headline">¶</a></h1>
+<p><strong>Table 1.</strong> List and description of predictive performance evaluation metrics in HydroBench. Here, Q represents streamflow, an example of the dependent variable, P represents precipitation, as an example of an input flux variable, mod = model, and obs = observed.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Metric name (Output)</strong></p></th>
+<th class="head"><p><strong>Equation</strong></p></th>
+<th class="head"><p><strong>Syntax/Function with Inputs</strong></p></th>
+<th class="head"><p><strong>Description and skill</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Nash-Sutcliffe efficiency(NSE)</p></td>
+<td><p><span class="math notranslate nohighlight">\( E = mc^2 \)</span></p></td>
+<td><p><font size="2"> <span class="math notranslate nohighlight">\( PredictivePerformanceSummary (Q_{obs},Q_{mod})\)</span> </font></p></td>
+<td><p>NSE is relatively skilled in revealing model performance in capturing high flows, while it has limited skill in capturing low flows, as it is an L2 norm-derived metric.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Log transformed NSE (logNSE)</p></td>
+<td><p>Similar to NSE but withand in the logarithm space.</p></td>
+<td><p>PredictivePerformanceSummary(, )</p></td>
+<td><p>logNSE is similar to the Nash Sutcliffe coefficient but with the inputs being transformed to the logarithm space. As it is computed based on log-transformed inputs, it is skilled in capturing model predictive performances of low flows.</p></td>
+</tr>
+<tr class="row-even"><td><p>Percent Bias (PBIAS)</p></td>
+<td><p></p></td>
+<td><p>PredictivePerformanceSummary(, )</p></td>
+<td><p>Compared to the L2 norm-derived NSE, PBIAS is an L1-derived metric that is less sensitive to peaks and suitable to reveal predictive performances of total streamflow volume (Moriasi et al., 2015).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pearson correlation coefficient (r)</p></td>
+<td><p></p></td>
+<td><p>PredictivePerformanceSummary(, )</p></td>
+<td><p>r is a linear measure of model performance. It quantifies the linear relationship between observed and model prediction.</p></td>
+</tr>
+<tr class="row-even"><td><p>Kling-Gupta (KGE)</p></td>
+<td><p></p></td>
+<td><p>PredictivePerformanceSummary(, )</p></td>
+<td><p>Contrary to NSE, KGE is a recent metric that, to some extent, addresses NSE’s biases and helps evaluate model performances in capturing both high and low flows better (Gupta et al., 2009).</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 2.</strong> List and description of hydrological signature-based model diagnostic measures in HydroBench. Here, Q denotes streamflow, an example of the dependent variable, P denotes precipitation, an example of an input flux variable, and r denotes rank based on a decreasing sorting of a time series.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Metric name (Output)</strong></p></th>
+<th class="head"><p><strong>Equation</strong></p></th>
+<th class="head"><p><strong>Syntax/Function with main Inputs</strong></p></th>
+<th class="head"><p><strong>Description and skill</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Plot of Runoff coefficient (RC) and its annual average value</p></td>
+<td><p></p></td>
+<td><p>AnnualRunoffCoefficient (table, StrtHydroYear, … EndHydroYear, PrecipName, RunoffName) With:</p></td>
+<td><p>RC deals with the flow of mass from precipitation to streamflow and helps in diagnosing water balance discrepancies between the observed and model time series. Namely, it measures to what extent the model captures the observed annual water balance.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Plot of Flow duration curve (FDC) and its slope within a given interval</p></td>
+<td><p></p></td>
+<td><p>With:</p></td>
+<td><p>FDC provides visual diagnostics of model performance in capturing both high- and low-flow segments of a hydrograph in a temporally delinked manner.</p></td>
+</tr>
+<tr class="row-even"><td><p>Recession curve and its slope and intercept in the log-linear space</p></td>
+<td><p></p></td>
+<td><p>… With:</p></td>
+<td><p>Recession curves help evaluate model performance in the absence of precipitation. Their shape is most sensitive to the rate at which water is released from catchment storage. Consequently, recession curves can indicate a model’s performance in characterizing subsurface processes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Plot of Time Linked Flow Duration curve (T-FDC) and its value for a given number of diagonal.</p></td>
+<td><p></p></td>
+<td><p>… With: observed streamflow number of diagonals to consider model streamflow</p></td>
+<td><p>As FDC does not have a time component in revealing under- and overestimation of flows, we developed T-FDC, which complements FDC by incorporating a time component. For a given day observed streamflow, T-FDC tracks whether a model estimate results in the same bin, higher or lower bin. This makes it to be analogous to the confusion matrix and requires binning of the data according to the observed minimum and maximum values. T-FDC is a (visual) metric between FDC and hydrograph. Thus T-FDC eases the interpretation of a hydrograph by simplifying it to be within a specific bin count.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 3.</strong> List and description of information-theoretic model diagnostic metrics. Here, Q denotes streamflow, an example of the dependent variable of interest, P denotes precipitation, an example of an input flux variable and t is the time step.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Metric name (Output)</strong></p></th>
+<th class="head"><p><strong>Equation</strong></p></th>
+<th class="head"><p><strong>Syntax/Function with main Inputs</strong></p></th>
+<th class="head"><p><strong>Description and skill</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Entropy (H(x))</p></td>
+<td><p></p></td>
+<td><p>With: A dictionary containing source (e.g., precipitation) and sink (e.g., streamflow) variables along with statistical significance measures. of variable X</p></td>
+<td><p>Provides a measure of the uncertainty of the indicated flux or store variable(s) (Shannon 1948).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mutual Information (I)</p></td>
+<td><p></p></td>
+<td><p>With: optsHJ – A dictionary containing source (e.g., precipitation) and sink (e.g., streamflow) variables along with statistical significance measures.</p></td>
+<td><p>MI quantifies the predictive performance of a model, that is, it measures the shared information content of the observed and modeled dependent variable.</p></td>
+</tr>
+<tr class="row-even"><td><p>Transfer Entropy (TE)</p></td>
+<td><p></p></td>
+<td><p>With: A dictionary containing source (e.g., precipitation) and sink (e.g., streamflow) variables along with statistical significance measures. from source to sink.</p></td>
+<td><p>TE quantifies the shared information between two variables (typically thought of as an independent and dependent variable) conditioned on the history of the dependent variable (Schreiber 2000). In HydroBench, the variables can be any flux or store variables as chosen by expert (users) choice.</p></td>
+</tr>
+<tr class="row-odd"><td><p>The trade-off between functional and predictive performances</p></td>
+<td><p></p></td>
+<td><p>… With:</p></td>
+<td><p>The tradeoffs between functional and predictive performances across models are visualized through a bivariate plot showing I and TE (Ruddell et al 2019).</p></td>
+</tr>
+<tr class="row-even"><td><p>Process networks (PN)</p></td>
+<td><p></p></td>
+<td><p>With: -</p></td>
+<td><p>PNs provide a visual web of the model internal information flow between different flux and store variables as computed by TE.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
     <script type="text/x-thebe-config">
@@ -323,13 +338,6 @@ the NHM-PRMS product at the
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="PredictivePerformanceMetrics.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Predictive Performance Measues</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             
         </div>
