@@ -48,7 +48,7 @@ Out of the CONUS wide NHM-PRMS products, the example notebook at the end of this
 the NHM-PRMS product at the 
 [Cedar River, WA](https://waterdata.usgs.gov/nwis/nwismap/?site_no=12115000&agency_cd=USGS). 
 
-For an interactive use of the example notebook please refer to the following binder link 
+For an interactive use of the example notebook, please refer to the following binder link 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/EMscience/HydroBench/HEAD).
 
  
